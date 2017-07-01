@@ -81,7 +81,8 @@ h1, h2, h3, h4, h5, h6 {
 // Custom Navigation Bar
 
 .navbar-custom {
-    background-color: @gray-darker;
+    // background-color: @gray-darker;
+    background-color: #e7e7e7;
     border-color: transparent;
     .navbar-brand {
         color: @theme-primary;
@@ -95,6 +96,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     .navbar-collapse {
         border-color: fade(white, 2%);
+        &.collapsing, &.in {
+            li {
+                & a { color: @gray-light; }
+                &.active a { color: white; }
+            }
+        }
     }
     .navbar-toggle {
         background-color: @theme-primary;
@@ -158,10 +165,15 @@ h1, h2, h3, h4, h5, h6 {
 
 @media(min-width:768px) {
     .navbar-custom.affix {
-        background-color: @gray-darker;
+        // background-color: @gray-darker;
+        background-color: #e7e7e7;
         padding: 10px 0;
         .navbar-brand {
             font-size: 1.5em;
+        }
+        .nav li {
+            & a { color: @gray-light; }
+            &.active a { color: white; }
         }
     }
 }
@@ -542,6 +554,9 @@ section#contact {
     .section-heading {
         color: white;
     }
+    address.address-card {
+        color: white;
+    }
     .form-group {
         margin-bottom: 25px;
         input,
@@ -718,11 +733,13 @@ ul.social-buttons {
 ::-moz-selection {
     text-shadow: none;
     background: @theme-primary;
+    color: lighten(@theme-primary, 50%);
 }
 
 ::selection {
     text-shadow: none;
     background: @theme-primary;
+    color: lighten(@theme-primary, 50%);
 }
 
 img::selection {
