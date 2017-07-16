@@ -85,7 +85,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #e7e7e7;
     border-color: transparent;
     .navbar-brand {
-        color: @theme-primary;
+        color: white;
+        font-weight: bold;
         .script-font;
         &:hover,
         &:focus,
@@ -170,6 +171,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 10px 0;
         .navbar-brand {
             font-size: 1.5em;
+            color: darken(@theme-primary, 10%);
         }
         .nav li {
             & a { color: @gray-light; }
@@ -191,17 +193,21 @@ header {
         padding-bottom: 50px;
         .intro-lead-in {
             .serif-font;
-            font-style: italic;
             font-size: 22px;
             line-height: 22px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
         .intro-heading {
             .heading-font;
             font-weight: 700;
-            font-size: 50px;
-            line-height: 50px;
-            margin-bottom: 25px;
+            font-size: 35px;
+            line-height: 35px;
+            margin-bottom: 20px;
+
+            small {
+                font-weight: 500;
+                font-size: 50%;
+            }
         }
     }
 }
@@ -213,17 +219,16 @@ header {
             padding-bottom: 200px;
             .intro-lead-in {
                 .serif-font;
-                font-style: italic;
-                font-size: 40px;
-                line-height: 40px;
-                margin-bottom: 25px;
+                font-size: 30px;
+                line-height: 30px;
+                margin-bottom: 20px;
             }
             .intro-heading {
                 .heading-font;
                 font-weight: 700;
-                font-size: 75px;
-                line-height: 75px;
-                margin-bottom: 50px;
+                font-size: 50px;
+                line-height: 50px;
+                margin-bottom: 25px;
             }
         }
     }
